@@ -1070,12 +1070,12 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   color: var(--primary-bg-t-color);
-  transition-property: color, transform;
+  transition-property: background-color, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
 }
