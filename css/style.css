@@ -1018,6 +1018,11 @@ img {
   resize: none;
   height: 120px;
 }
+.modal-textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  color: rgba(117, 117, 117, 0.5);
+}
 
 .custom-checkbox {
   width: 16px;
