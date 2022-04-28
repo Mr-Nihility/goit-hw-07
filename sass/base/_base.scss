@@ -1,7 +1,7 @@
 /*  глобальные стили */
 body {
   color: var(--primary-color);
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-ff), sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
