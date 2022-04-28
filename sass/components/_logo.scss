@@ -1,0 +1,31 @@
+/* logo */
+
+.logo {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.logo:hover,
+.logo:focus {
+  color: var(--primary-color);
+}
+
+.logo__start--blue {
+  color: var(--accent-color);
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+.logo__end {
+  color: var(--logo-color-text);
+  &--white {
+    color: #fff;
+  }
+}

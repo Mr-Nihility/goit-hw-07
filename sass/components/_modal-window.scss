@@ -1,0 +1,224 @@
+/* 
+==========================================
+| modal-window
+==========================================
+*/
+/* ======================================================== */
+.back-drop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  pointer-events: initial;
+  transition-property: opacity, visibility, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.back-drop.is-hidden {
+  transform: scale(3);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+
+  padding: 40px;
+  background-color: var(--primary-bg-t-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: var(--logo-color-text);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-bg-t-color);
+  transition-property: color, background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-bg-t-color);
+}
+
+.close-icon {
+  display: block;
+  fill: currentColor;
+  transition-property: transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.close-btn:hover .close-icon {
+  transform: scale(1.05);
+}
+
+/* 
+==========================================
+| modal-form
+==========================================
+*/
+
+.modal-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.modal-form-label {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.label-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal-form-input,
+.modal-form-textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.modal-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.modal-form-input:focus + .modal-icon {
+  color: var(--accent-color);
+}
+
+.modal-form-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-input-title {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.modal-form-input {
+  padding: 10px 10px 10px 40px;
+}
+
+.modal-textarea {
+  padding: 12px 16px;
+  resize: none;
+  height: 120px;
+}
+.modal-textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--secondary-color);
+  border-radius: 2px;
+  transition-property: border-color, background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.checkbox-icon {
+  fill: transparent;
+  flex-shrink: 0;
+  transition-property: fill;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.modal-form-checkbox:checked + .custom-checkbox > .checkbox-icon {
+  fill: var(--primary-bg-t-color);
+}
+
+.modal-form-checkbox:checked + .custom-checkbox {
+  border-color: transparent;
+  background-color: var(--accent-color);
+}
+
+.modal-chexbox-title {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-right: 4px;
+}
+
+.modal-form-link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.modal-button {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  color: var(--primary-bg-t-color);
+  transition-property: background-color, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+.modal-button:hover {
+  background-color: var(--social-color);
+  transform: scale(1.02) translateY(-1px);
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

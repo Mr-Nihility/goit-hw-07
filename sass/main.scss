@@ -1,0 +1,51 @@
+// base/ — включает глобальные стили, такие как сброс стилей, типография, цвета и т.д.
+// components/ — содержит отдельные компоненты с отдельным файлом .scss для каждого из них.
+// layout/ — содержит стили для основных компонентов макета, таких как хедер, футер, навигация и т.д.
+// pages/ — содержит стили, специфичные для отдельных страниц, если это необходимо.
+// themes/ — стили для разных тем.
+// utils/ — глобальные миксины, функции, вспомогательные селекторы и т.д.
+// vendors/ — стили, миксины и прочее от третьих сторон
+// main.scss — выходной файл, в котором объединяются все стили.
+
+// Util styles
+@import "./utils/vars";
+@import "./vendor/visually-hidden";
+
+// Base styles
+@import "./base/base";
+@import "./base/reset";
+
+// ***********************Architecture************************
+//******************header****************
+@import "./layout/header";
+
+//components
+@import "./components/logo";
+@import "./components/navigation";
+@import "./components/contacts";
+
+//**hero
+@import "./layout/hero";
+
+//******************feature****************
+@import "./layout/feature";
+
+//******************occupation****************
+@import "./layout/occupation";
+
+//*******************team************************
+@import "./layout/team";
+
+//******************clients**********************
+@import "./layout/clients";
+
+//*******************footer***********************
+@import "./layout/footer";
+//components
+@import "./components/social-links";
+@import "./components/subscribe-form";
+
+//*******************portfolio********************
+@import "./layout/portfolio";
+
+@import "./components/modal-window";
