@@ -1,29 +1,30 @@
 /* logo */
 
 .logo {
-  display: block;
+  display: flex;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  transition-property: color;
+  transition-property: transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
 }
 
-.logo:hover,
-.logo:focus {
-  color: var(--primary-color);
-}
-
-.logo__start--blue {
-  color: var(--accent-color);
-  transition-property: color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic-bezier);
+.logo__start {
+  display: block;
+  &--blue {
+    color: var(--accent-color);
+  }
 }
 .logo__end {
+  display: block;
   color: var(--logo-color-text);
   &--white {
     color: #fff;

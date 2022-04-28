@@ -18,14 +18,15 @@
 // ***********************Architecture************************
 //******************header****************
 @import "./layout/header";
-
 //components
 @import "./components/logo";
 @import "./components/navigation";
 @import "./components/contacts";
 
-//**hero
+//**********************hero************************
 @import "./layout/hero";
+//components
+@import "./components/modal-window";
 
 //******************feature****************
 @import "./layout/feature";
@@ -47,5 +48,6 @@
 
 //*******************portfolio********************
 @import "./layout/portfolio";
-
-@import "./components/modal-window";
+// components
+@import "./components/filter-btn";
+@import "./components/cards";
