@@ -6,44 +6,28 @@
 @import "./base/base";
 @import "./base/reset";
 
-// ***********************Architecture************************
-//******************header****************
-@import "./layout/header";
-//components
+//Component styles
 @import "./components/logo";
 @import "./components/navigation";
 @import "./components/contacts";
-
-//**********************hero************************
-@import "./layout/hero";
-//components
 @import "./components/modal-window";
 @import "./components/close-btn";
 @import "./components/modal-form";
 
-//******************feature****************
-@import "./layout/feature";
-
-//******************occupation****************
-@import "./layout/occupation";
-
-//*******************team************************
-@import "./layout/team";
-
-//******************clients**********************
-@import "./layout/clients";
-
-//*******************footer***********************
-@import "./layout/footer";
-//components
 @import "./components/social-links";
 @import "./components/subscribe-form";
-
-//*******************portfolio********************
-@import "./layout/portfolio";
-// components
 @import "./components/filter";
 @import "./components/cards";
+
+// Layout styles
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/feature";
+@import "./layout/occupation";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/portfolio";
 
 // base/ — включает глобальные стили, такие как сброс стилей, типография, цвета и т.д.
 // components/ — содержит отдельные компоненты с отдельным файлом .scss для каждого из них.
