@@ -19,7 +19,6 @@
   background-color: var(--seconadary-bg-color);
   background-position: center;
   background-size: contain;
-  text-align: center;
   background-repeat: no-repeat;
   animation: bg-move 20s ease-in infinite both;
 }
@@ -47,7 +46,6 @@
     background-size: 150%;
   }
 }
-/* ------------------------------------------------------------------- */
 /* 
 ==========================================
 | hero button
@@ -55,25 +53,5 @@
 */
 
 .hero__button {
-  padding: 10px 32px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--primary-bg-t-color);
-  background-color: var(--accent-color);
-  box-shadow: none;
-  border-radius: 4px;
-  border: transparent;
-  transition-property: color, background-color, box-shadow, transform;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic-bezier);
-
-  &:hover,
-  &:focus {
-    color: var(--primary-bg-t-color);
-    background-color: var(--social-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transform: scale(1.1) translateY(-2px);
-  }
+  margin: 0 auto;
 }

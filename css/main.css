@@ -408,12 +408,10 @@ svg {
 }
 
 .modal-form__custom-checkbox {
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 7px;
   border: 2px solid var(--secondary-color);
   border-radius: 2px;
   transition-property: border-color, background-color;
@@ -428,6 +426,8 @@ svg {
 
 .modal-form__checkbox-icon {
   fill: transparent;
+  width: 16px;
+  height: 15px;
   flex-shrink: 0;
   transition-property: fill, transform;
   transition-duration: var(--duration);
@@ -436,7 +436,6 @@ svg {
 
 .modal-form__checkbox:checked + .modal-form__custom-checkbox > .modal-form__checkbox-icon {
   fill: var(--primary-bg-t-color);
-  transform: scale(1.5);
 }
 
 .modal-form__chexbox-title {
@@ -459,26 +458,7 @@ svg {
 }
 
 .modal-form__btn {
-  display: block;
   margin: 0 auto;
-  padding: 8px 28px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  color: var(--primary-bg-t-color);
-  transition-property: background-color, transform;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic-bezier);
-}
-
-.modal-form__btn:hover {
-  background-color: var(--social-color);
-  transform: scale(1.02) translateY(-1px);
 }
 
 /* socialmedia */
@@ -563,34 +543,6 @@ svg {
 
 .subscribe-form__field:not(:placeholder-shown) {
   color: var(--primary-bg-t-color);
-}
-
-.subscribe-form__button {
-  display: flex;
-  align-items: center;
-  padding: 8px 28px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  color: var(--primary-bg-t-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  transition-property: background-color, transform;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic-bezier);
-}
-
-.subscribe-form__button:hover {
-  background-color: var(--social-color);
-  transform: scale(1.02) translateY(-1px);
-}
-
-.subscribe-form__icon {
-  fill: currentColor;
-  margin-left: 10px;
 }
 
 /* filter menu */
@@ -690,6 +642,36 @@ svg {
   transform: translateY(0);
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 28px;
+  width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  color: var(--primary-bg-t-color);
+  transition-property: background-color, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.button:hover, .button:focus {
+  background-color: var(--social-color);
+  transform: scale(1.02) translateY(-1px);
+}
+
+.button__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}
+
 /* 
 ==========================================
 | header
@@ -729,7 +711,6 @@ svg {
   background-color: var(--seconadary-bg-color);
   background-position: center;
   background-size: contain;
-  text-align: center;
   background-repeat: no-repeat;
   animation: bg-move 20s ease-in infinite both;
 }
@@ -758,33 +739,13 @@ svg {
   }
 }
 
-/* ------------------------------------------------------------------- */
 /* 
 ==========================================
 | hero button
 ==========================================
 */
 .hero__button {
-  padding: 10px 32px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--primary-bg-t-color);
-  background-color: var(--accent-color);
-  box-shadow: none;
-  border-radius: 4px;
-  border: transparent;
-  transition-property: color, background-color, box-shadow, transform;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic-bezier);
-}
-
-.hero__button:hover, .hero__button:focus {
-  color: var(--primary-bg-t-color);
-  background-color: var(--social-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transform: scale(1.1) translateY(-2px);
+  margin: 0 auto;
 }
 
 /* 
