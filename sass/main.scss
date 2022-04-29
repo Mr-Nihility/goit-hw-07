@@ -18,6 +18,8 @@
 @import "./layout/hero";
 //components
 @import "./components/modal-window";
+@import "./components/close-btn";
+@import "./components/modal-form";
 
 //******************feature****************
 @import "./layout/feature";
@@ -40,7 +42,7 @@
 //*******************portfolio********************
 @import "./layout/portfolio";
 // components
-@import "./components/filter-btn";
+@import "./components/filter";
 @import "./components/cards";
 
 // base/ — включает глобальные стили, такие как сброс стилей, типография, цвета и т.д.

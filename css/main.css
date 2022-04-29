@@ -377,6 +377,14 @@ svg {
   position: absolute;
   top: 8px;
   right: 8px;
+}
+
+/* 
+==========================================
+| close-btn
+==========================================
+*/
+.close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -393,12 +401,12 @@ svg {
   cursor: pointer;
 }
 
-.modal__close-btn:hover, .modal__close-btn:focus {
+.close-btn:hover, .close-btn:focus {
   color: var(--accent-color);
   background-color: var(--primary-bg-t-color);
 }
 
-.modal__close-icon {
+.close-btn__icon {
   display: block;
   fill: currentColor;
   transition-property: transform;
@@ -406,7 +414,7 @@ svg {
   transition-timing-function: var(--cubic-bezier);
 }
 
-.modal__close-btn:hover .modal__close-icon {
+.close-btn:hover .close-btn__icon {
   transform: scale(1.12);
 }
 
@@ -428,6 +436,13 @@ svg {
   position: relative;
   display: block;
   margin-bottom: 15px;
+}
+
+.modal-form__label:last-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .modal-form__input,
@@ -471,13 +486,14 @@ svg {
   left: 12px;
   bottom: 10px;
   fill: currentColor;
-  transition-property: color;
+  transition-property: color, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
 }
 
 .modal-form__input:focus + .modal-form__icon {
   color: var(--accent-color);
+  transform: scale(1.1);
 }
 
 .modal-form__text {
@@ -486,13 +502,6 @@ svg {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-}
-
-.label-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
 }
 
 .modal-form__custom-checkbox {
@@ -517,13 +526,14 @@ svg {
 .modal-form__checkbox-icon {
   fill: transparent;
   flex-shrink: 0;
-  transition-property: fill;
+  transition-property: fill, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
 }
 
 .modal-form__checkbox:checked + .modal-form__custom-checkbox > .modal-form__checkbox-icon {
   fill: var(--primary-bg-t-color);
+  transform: scale(1.5);
 }
 
 .modal-form__chexbox-title {
@@ -784,7 +794,7 @@ svg {
 }
 
 /* socialmedia */
-.socialmedia__list {
+.socialmedia {
   display: flex;
   justify-content: center;
   align-items: baseline;
