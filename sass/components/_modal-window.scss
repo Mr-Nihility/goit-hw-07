@@ -16,13 +16,13 @@
   transition-property: opacity, visibility, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
-}
 
-.back-drop.is-hidden {
-  transform: scale(3);
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  &.is-hidden {
+    transform: scale(3);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 }
 
 .modal {
@@ -38,6 +38,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .modal__close-btn {
   position: absolute;
   top: 8px;
@@ -62,10 +63,6 @@
     color: var(--accent-color);
     background-color: var(--primary-bg-t-color);
   }
-
-  &:hover .modal__close-icon {
-    transform: scale(1.12);
-  }
 }
 
 .modal__close-icon {
@@ -74,6 +71,10 @@
   transition-property: transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+
+  .modal__close-btn:hover & {
+    transform: scale(1.12);
+  }
 }
 
 /* 
@@ -115,10 +116,6 @@
   &:focus {
     border-color: var(--accent-color);
   }
-
-  &:focus + .modal-form__icon {
-    color: var(--accent-color);
-  }
 }
 
 .modal-form__textarea {
@@ -145,6 +142,10 @@
   transition-property: color;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+
+  .modal-form__input:focus + & {
+    color: var(--accent-color);
+  }
 }
 
 .modal-form__text {
@@ -174,6 +175,11 @@
   transition-property: border-color, background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+
+  .modal-form__checkbox:checked + & {
+    border-color: transparent;
+    background-color: var(--accent-color);
+  }
 }
 
 .modal-form__checkbox-icon {
@@ -182,17 +188,10 @@
   transition-property: fill;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
-}
 
-.modal-form__checkbox:checked
-  + .modal-form__custom-checkbox
-  > .modal-form__checkbox-icon {
-  fill: var(--primary-bg-t-color);
-}
-
-.modal-form__checkbox:checked + .modal-form__custom-checkbox {
-  border-color: transparent;
-  background-color: var(--accent-color);
+  .modal-form__checkbox:checked + .modal-form__custom-checkbox > & {
+    fill: var(--primary-bg-t-color);
+  }
 }
 
 .modal-form__chexbox-title {
@@ -205,6 +204,13 @@
 .modal-form__link {
   text-decoration-line: underline;
   color: var(--accent-color);
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+
+  &:hover {
+    color: var(--social-color);
+  }
 }
 
 .modal-form__btn {

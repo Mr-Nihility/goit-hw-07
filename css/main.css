@@ -1,5 +1,7 @@
 @charset "UTF-8";
 :root {
+  --main-ff: "Roboto", sans-serif;
+  --logo-ff: "Raleway", sans-serif;
   --primary-color: #757575;
   --secondary-color: #212121;
   --accent-color: #2196f3;
@@ -11,11 +13,6 @@
   --icon-color: #afb1b8;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
-  --color-1: #186cb8;
-  --color-2: #2a9a9f;
-  --color-3: #f1b211;
-  --color-4: #e83611;
-  --color-5: #f9002f;
 }
 
 /*
@@ -47,7 +44,7 @@
 /*  глобальные стили */
 body {
   color: var(--primary-color);
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-ff);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -135,7 +132,7 @@ svg {
 /* logo */
 .logo {
   display: flex;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--logo-ff);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -192,6 +189,10 @@ svg {
   color: var(--accent-color);
 }
 
+.nav__link:hover::after, .nav__link:focus::after {
+  transform: scaleX(1);
+}
+
 .nav__item {
   position: relative;
 }
@@ -221,12 +222,11 @@ svg {
   transform: scale(1);
 }
 
-.nav__link:hover::after,
-.nav__link:focus::after {
-  transform: scaleX(1);
+/* contacts */
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
 }
 
-/* contacts */
 .contacts__link {
   display: flex;
   align-items: center;
@@ -259,10 +259,6 @@ svg {
   margin-left: auto;
   fill: currentColor;
   margin-right: 10px;
-}
-
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 /* 
@@ -325,7 +321,7 @@ svg {
   background-color: var(--accent-color);
   box-shadow: none;
   border-radius: 4px;
-  border: none;
+  border: transparent;
   transition-property: color, background-color, box-shadow, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
@@ -402,16 +398,16 @@ svg {
   background-color: var(--primary-bg-t-color);
 }
 
-.modal__close-btn:hover .modal__close-icon {
-  transform: scale(1.12);
-}
-
 .modal__close-icon {
   display: block;
   fill: currentColor;
   transition-property: transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+}
+
+.modal__close-btn:hover .modal__close-icon {
+  transform: scale(1.12);
 }
 
 /* 
@@ -454,10 +450,6 @@ svg {
   border-color: var(--accent-color);
 }
 
-.modal-form__input:focus + .modal-form__icon {
-  color: var(--accent-color);
-}
-
 .modal-form__textarea {
   padding: 12px 16px;
   resize: none;
@@ -482,6 +474,10 @@ svg {
   transition-property: color;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+}
+
+.modal-form__input:focus + .modal-form__icon {
+  color: var(--accent-color);
 }
 
 .modal-form__text {
@@ -513,6 +509,11 @@ svg {
   transition-timing-function: var(--cubic-bezier);
 }
 
+.modal-form__checkbox:checked + .modal-form__custom-checkbox {
+  border-color: transparent;
+  background-color: var(--accent-color);
+}
+
 .modal-form__checkbox-icon {
   fill: transparent;
   flex-shrink: 0;
@@ -521,15 +522,8 @@ svg {
   transition-timing-function: var(--cubic-bezier);
 }
 
-.modal-form__checkbox:checked
-+ .modal-form__custom-checkbox
-> .modal-form__checkbox-icon {
+.modal-form__checkbox:checked + .modal-form__custom-checkbox > .modal-form__checkbox-icon {
   fill: var(--primary-bg-t-color);
-}
-
-.modal-form__checkbox:checked + .modal-form__custom-checkbox {
-  border-color: transparent;
-  background-color: var(--accent-color);
 }
 
 .modal-form__chexbox-title {
@@ -542,6 +536,13 @@ svg {
 .modal-form__link {
   text-decoration-line: underline;
   color: var(--accent-color);
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.modal-form__link:hover {
+  color: var(--social-color);
 }
 
 .modal-form__btn {
@@ -705,6 +706,10 @@ svg {
   display: flex;
 }
 
+.client__item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .client__link {
   display: flex;
   justify-content: center;
@@ -724,10 +729,6 @@ svg {
   border: 1px solid #2196f3;
   color: #2196f3;
   transform: scale(1.09);
-}
-
-.client__item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .client__icon {

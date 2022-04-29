@@ -6,8 +6,10 @@
   align-items: baseline;
 }
 
-.socialmedia__item:not(:last-child) {
-  margin-right: 10px;
+.socialmedia__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .socialmedia__link {

@@ -2,6 +2,11 @@
 
 .contacts {
 }
+.contacts__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
 
 .contacts__link {
   display: flex;
@@ -16,17 +21,17 @@
   &:focus {
     color: var(--accent-color);
   }
-}
 
-.contacts__link--white {
-  color: var(--primary-bg-t-color);
-}
+  &--white {
+    color: var(--primary-bg-t-color);
+  }
 
-.contacts__link--small {
-  font-style: normal;
-  line-height: 1.71;
-  font-weight: 400;
-  letter-spacing: inherit;
+  &--small {
+    font-style: normal;
+    line-height: 1.71;
+    font-weight: 400;
+    letter-spacing: inherit;
+  }
 }
 
 .contacts__icon {
@@ -36,8 +41,4 @@
   margin-left: auto;
   fill: currentColor;
   margin-right: 10px;
-}
-
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
 }

@@ -24,6 +24,12 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  // необязательно
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+  }
 }
 
 .nav__item {
@@ -53,10 +59,4 @@
 
 .nav__link--current::after {
   transform: scale(1);
-}
-
-// необязательно
-.nav__link:hover::after,
-.nav__link:focus::after {
-  transform: scaleX(1);
 }

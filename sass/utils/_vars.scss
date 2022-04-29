@@ -1,6 +1,6 @@
 :root {
-  --main-ff: "Roboto";
-  --logo-ff: "Raleway";
+  --main-ff: "Roboto", sans-serif;
+  --logo-ff: "Raleway", sans-serif;
   --primary-color: #757575;
   --secondary-color: #212121;
   --accent-color: #2196f3;
@@ -12,11 +12,6 @@
   --icon-color: #afb1b8;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
-  --color-1: #186cb8;
-  --color-2: #2a9a9f;
-  --color-3: #f1b211;
-  --color-4: #e83611;
-  --color-5: #f9002f;
 }
 
 /*
